@@ -8,6 +8,10 @@ Given /^there are the following users:$/ do |table|
   end
 end
 
+When /^I check "([^\"]*)"$/ do |label|
+  check(label)
+end
+
 Given /^I am signed in as them$/ do
   steps(%Q{
   	Given I am on the homepage
